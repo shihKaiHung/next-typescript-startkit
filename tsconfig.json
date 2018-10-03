@@ -1,20 +1,29 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "preserveConstEnums": true,
-    "removeComments": false,
-    "skipLibCheck": true,
+    "target": "es5",
+    "module": "commonjs",
     "sourceMap": true,
-    "strict": true,
-    "target": "esnext"
-  }
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "lib": ["es5", "es6", "dom", "scripthost"],
+    "jsx": "react",
+    "types": ["node", "reflect-metadata"],
+    "skipLibCheck": false,
+    "pretty": true,
+    "rootDir": "src",
+    "baseUrl": "."
+  },
+  "exclude": [
+    "node_modules",
+    "script",
+    "static",
+    ".storybook",
+    ".vscode",
+    "src/dummies",
+    "config",
+    ".awcache"
+  ]
 }
