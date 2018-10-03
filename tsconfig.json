@@ -19,11 +19,6 @@
   "exclude": [
     "node_modules",
     "script",
-    "static",
-    ".storybook",
-    ".vscode",
-    "src/dummies",
-    "config",
-    ".awcache"
+    "static"
   ]
 }
