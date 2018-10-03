@@ -1,0 +1,16 @@
+.idea
+.next
+.vscode
+server.js
+server.js.map
+/dist
+/coverage
+node_modules
+.DS_Store
+*.log
+*.map
+.awcache
+/storybook-static
+/release
+cypress/screenshots
+cypress/videos
