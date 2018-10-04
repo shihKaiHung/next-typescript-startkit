@@ -5,7 +5,7 @@ import * as next from "next";
 const dev = process.env.NODE_ENV !== "production";
 const port = parseInt(process.env.PORT, 10) || 3000;
 
-const app = next({dev, dir: "./src"});
+const app = next({dev, dir: "src"});
 
 const handle = app.getRequestHandler();
 
