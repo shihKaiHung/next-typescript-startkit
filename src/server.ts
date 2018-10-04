@@ -3,7 +3,7 @@ import express from "express";
 import * as next from "next";
 
 const dev = process.env.NODE_ENV !== "production";
-const port = parseInt(process.env.PORT, 10) || 3000;
+const port = parseInt(process.env.PORT, 10) || 3100;
 
 const app = next({dev, dir: "src"});
 

@@ -1,10 +1,16 @@
 import Document, {Head, Main, NextDocumentContext, NextScript} from "next/document";
 import React from "react";
+import {ServerStyleSheet} from "styled-components";
 
 export default class MyDocument extends Document {
   public static async getInitialProps(ctx: NextDocumentContext) {
+    const sheet = new ServerStyleSheet();
+    const styleTags = sheet.getStyleElement();
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    return {
+      styleTags,
+      ...initialProps,
+    };
   }
 
   public render() {
