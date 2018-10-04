@@ -7,7 +7,12 @@ const Header: React.SFC<{}> = () => (
     <Container>
       <LogoWrap />
       <NavWrap>
-        购彩大厅
+        <a href="">购彩大厅</a>
+        <a href="">手机购彩</a>
+        <a href="">优惠活动</a>
+        <a href="">走势图表</a>
+        <a href="">开奖资讯</a>
+        <a href="">在线客服</a>
       </NavWrap>
     </Container>
   </Wrap>
@@ -34,4 +39,14 @@ const NavWrap = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 30px;
+    &:first-child {
+      margin: 0;
+    }
+  }
 `;
+

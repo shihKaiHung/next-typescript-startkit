@@ -3,21 +3,23 @@ import React from "react";
 import {ServerStyleSheet} from "styled-components";
 
 export default class MyDocument extends Document {
-  public static async getInitialProps(ctx: NextDocumentContext) {
+  public static async getInitialProps({renderPage, req}: NextDocumentContext) {
     const sheet = new ServerStyleSheet();
+    const page = renderPage((App) => (props) => sheet.collectStyles(<App {...props} />));
     const styleTags = sheet.getStyleElement();
-    const initialProps = await Document.getInitialProps(ctx);
     return {
+      ...page,
       styleTags,
-      ...initialProps,
     };
   }
 
   public render() {
+    const {styleTags} = this.props;
     return (
       <html>
       <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
+        {styleTags}
       </Head>
       <body className="custom_class">
       <Main />
